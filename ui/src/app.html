@@ -8,8 +8,8 @@
 
   <ul>
     <li repeat.for="todo of todos">
-      <input type="checkbox" checked.bind="todo.done">
-      <input class="custom-input" click.delegate="enableInput($event)" type="text" css="text-decoration: ${todo.done ? 'line-through' : 'none'}" value="${todo.description}" />
+      <input change.trigger="editTodo(todo.id)" type="checkbox" checked.bind="todo.done">
+      <input change.trigger="editTodo(todo.id)" class="custom-input" value.bind="todo.description" type="text" css="text-decoration: ${todo.done ? 'line-through' : 'none'}" />
       <button click.trigger="removeTodo(todo.id)">Remove</button>
     </li>
   </ul>
