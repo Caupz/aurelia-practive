@@ -149,3 +149,4 @@ C:\Users\helvi\Documents\Projects\aurelia-practive\api\AureliaPracticeAPI\Aureli
 C:\Users\helvi\Documents\Projects\aurelia-practive\api\AureliaPracticeAPI\AureliaPracticeAPI\bin\Debug\net5.0\System.Web.Http.dll
 C:\Users\helvi\Documents\Projects\aurelia-practive\api\AureliaPracticeAPI\AureliaPracticeAPI\bin\Debug\net5.0\System.Web.Http.Cors.dll
 C:\Users\helvi\Documents\Projects\aurelia-practive\api\AureliaPracticeAPI\AureliaPracticeAPI\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\helvi\Documents\Projects\aurelia-practive\api\AureliaPracticeAPI\AureliaPracticeAPI\bin\Debug\net5.0\RabbitMQ.Client.dll
