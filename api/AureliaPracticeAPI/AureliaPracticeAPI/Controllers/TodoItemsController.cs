@@ -59,8 +59,8 @@ namespace AureliaPracticeAPI.Controllers
                 return NotFound();
             }
 
-            todoItem.Name = todoItemDTO.Name;
-            todoItem.IsComplete = todoItemDTO.IsComplete;
+            todoItem.Description = todoItemDTO.Description;
+            todoItem.Done = todoItemDTO.Done;
 
             try
             {
@@ -81,8 +81,8 @@ namespace AureliaPracticeAPI.Controllers
         {
             var todoItem = new TodoItem
             {
-                IsComplete = todoItemDTO.IsComplete,
-                Name = todoItemDTO.Name
+                Done = todoItemDTO.Done,
+                Description = todoItemDTO.Description
             };
 
             _context.TodoItems.Add(todoItem);
@@ -115,8 +115,8 @@ namespace AureliaPracticeAPI.Controllers
             new TodoItemDTO
             {
                 Id = todoItem.Id,
-                Name = todoItem.Name,
-                IsComplete = todoItem.IsComplete
+                Description = todoItem.Description,
+                Done = todoItem.Done
             };
     }
 }
