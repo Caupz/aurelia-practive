@@ -1,0 +1,9 @@
+.custom-input {
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.custom-input:focus {
+    background-color: #FFF;
+    border: 1px solid #000;
+}

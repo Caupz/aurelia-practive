@@ -1,4 +1,5 @@
 import {API} from "./settings.js"
+import "./styles/index.css"
 
 interface Todo {
   id: 0,
