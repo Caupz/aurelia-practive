@@ -44,6 +44,12 @@ namespace AureliaPracticeAPI
 
             app.UseRouting();
 
+            app.UseCors(x => x.WithOrigins(Configuration.GetSection("AllowedOrigins").Value.Split(","))
+                  .AllowCredentials().WithHeaders(Configuration.GetSection("AllowedHeaders").Value.Split(","))
+                  .WithMethods(Configuration.GetSection("AllowedMethods").Value.Split(",")));
+
+            app.UseHttpsRedirection();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

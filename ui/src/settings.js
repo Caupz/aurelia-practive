@@ -1,0 +1,1 @@
+export var API = "https://localhost:44301/api"

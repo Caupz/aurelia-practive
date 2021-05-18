@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AureliaPracticeAPI.Models;
+using System.Web.Http.Cors;
 
 namespace AureliaPracticeAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors(origins: "http://localhost:8080/", headers: "*", methods: "*")]
     public class TodoItemsController : ControllerBase
     {
         private readonly TodoContext _context;
