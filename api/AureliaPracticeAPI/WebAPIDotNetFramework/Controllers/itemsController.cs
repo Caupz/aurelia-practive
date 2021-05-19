@@ -11,6 +11,7 @@ using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using ItemsDataAccess;
+using WebAPIDotNetFramework.Models;
 
 namespace WebAPIDotNetFramework.Controllers
 {
@@ -22,6 +23,7 @@ namespace WebAPIDotNetFramework.Controllers
         // GET: api/items
         public IQueryable<item> Getitems()
         {
+            Sender.Send("Retrieved list");
             return db.items;
         }
 
@@ -73,6 +75,38 @@ namespace WebAPIDotNetFramework.Controllers
             return StatusCode(HttpStatusCode.OK);
         }
 
+        // POST: api/items/5
+        [ResponseType(typeof(void))]
+        public async Task<IHttpActionResult> Postitem(int id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            item item = await db.items.FindAsync(id);
+            item.log_confirmed = 1;
+            db.Entry(item).State = EntityState.Modified;
+
+            try
+            {
+                await db.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (itemExists(item.id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return StatusCode(HttpStatusCode.Accepted);
+        }
+
         // POST: api/items
         [ResponseType(typeof(item))]
         public async Task<IHttpActionResult> Postitem(item item)
@@ -100,6 +134,7 @@ namespace WebAPIDotNetFramework.Controllers
                 }
             }
 
+            Sender.Send(string.Format("New entry:{0}", item.id));
             return CreatedAtRoute("DefaultApi", new { id = item.id }, item);
         }
 
