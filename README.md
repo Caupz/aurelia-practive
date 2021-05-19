@@ -1,1 +1,3 @@
-# aurelia-practive
+# aurelia-practice
+
+I'm just experimenting with C# ASP.NET WebAPI + Aurelia + RabbitMQ related librarys in this repository...
