@@ -14,7 +14,7 @@ export class App {
 
   created(owningView, myView) {
     console.log("created owningView", owningView, "myView", myView);
-    fetch(`${API}/TodoItems`)
+    fetch(`${API}/items`)
       .then(response => response.json())
       .then(data => {
         console.log("data", data)
@@ -31,7 +31,7 @@ export class App {
       };
       this.todoDescription = '';
 
-      fetch(`${API}/TodoItems`, {
+      fetch(`${API}/items`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,12 +59,18 @@ export class App {
       return console.log("invalid todo");
     }
 
-    fetch(`${API}/TodoItems/${Id}`, {
+    const postTodo = {
+      id: todo.id,
+      description: todo.description,
+      done: todo.done ? 1 : 0,
+    };
+
+    fetch(`${API}/items/${Id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(todo),
+      body: JSON.stringify(postTodo),
     })
     .then(response => {
       console.log('Success:', response);
@@ -79,7 +85,7 @@ export class App {
       return obj.id !== todoId
     });
 
-    fetch(`${API}/TodoItems/${todoId}`, {
+    fetch(`${API}/items/${todoId}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

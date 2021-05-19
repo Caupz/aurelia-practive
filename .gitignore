@@ -103,3 +103,8 @@ dist
 # TernJS port file
 .tern-port
 api/AureliaPracticeAPI/AureliaPracticeAPI/bin/Debug/
+api/AureliaPracticeAPI/packages/
+api/AureliaPracticeAPI/DataAccess/obj/Debug/
+api/AureliaPracticeAPI/ItemsDataAccess/obj/Debug/
+api/AureliaPracticeAPI/WebAPIDotNetFramework/obj/Debug/
+api/AureliaPracticeAPI/ItemsDataAccess/bin/Debug/

@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AureliaPracticeAPI", "AureliaPracticeAPI\AureliaPracticeAPI.csproj", "{A2A73799-EF81-4131-AE04-2803F861BC99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reciever", "Reciever\Reciever.csproj", "{2184B9AB-C224-4E93-98B2-C2A43AFCA049}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reciever", "Reciever\Reciever.csproj", "{2184B9AB-C224-4E93-98B2-C2A43AFCA049}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIDotNetFramework", "WebAPIDotNetFramework\WebAPIDotNetFramework.csproj", "{83186BCC-B000-4245-A5CB-57544CABBF44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemsDataAccess", "ItemsDataAccess\ItemsDataAccess.csproj", "{2337C3A9-EF8E-431F-A275-F434E12679CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{2184B9AB-C224-4E93-98B2-C2A43AFCA049}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2184B9AB-C224-4E93-98B2-C2A43AFCA049}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2184B9AB-C224-4E93-98B2-C2A43AFCA049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83186BCC-B000-4245-A5CB-57544CABBF44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83186BCC-B000-4245-A5CB-57544CABBF44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83186BCC-B000-4245-A5CB-57544CABBF44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83186BCC-B000-4245-A5CB-57544CABBF44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2337C3A9-EF8E-431F-A275-F434E12679CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2337C3A9-EF8E-431F-A275-F434E12679CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2337C3A9-EF8E-431F-A275-F434E12679CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2337C3A9-EF8E-431F-A275-F434E12679CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
