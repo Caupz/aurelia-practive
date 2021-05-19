@@ -13,10 +13,10 @@ namespace ItemsDataAccess
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class todoitemsEntities : DbContext
+    public partial class itemsEntities : DbContext
     {
-        public todoitemsEntities()
-            : base("name=todoitemsEntities")
+        public itemsEntities()
+            : base("name=itemsEntities")
         {
         }
     

@@ -15,7 +15,7 @@ namespace WebAPIDotNetFramework.Controllers
 
         public IEnumerable<item> Get()
         {
-            using (todoitemsEntities entities = new todoitemsEntities())
+            using (itemsEntities entities = new itemsEntities())
             {
                 return entities.items.ToList();
             }
@@ -23,7 +23,7 @@ namespace WebAPIDotNetFramework.Controllers
 
         public item Get(int id)
         {
-            using(todoitemsEntities entities = new todoitemsEntities())
+            using(itemsEntities entities = new itemsEntities())
             {
                 return entities.items.FirstOrDefault(e => e.id == id);
             }

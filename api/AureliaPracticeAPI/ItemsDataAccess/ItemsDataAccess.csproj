@@ -51,52 +51,50 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="item.cs">
-      <DependentUpon>Items.tt</DependentUpon>
+      <DependentUpon>items.tt</DependentUpon>
     </Compile>
-    <Compile Include="Items.Context.cs">
+    <Compile Include="items.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Items.Context.tt</DependentUpon>
+      <DependentUpon>items.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Items.cs">
+    <Compile Include="items.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Items.tt</DependentUpon>
+      <DependentUpon>items.tt</DependentUpon>
     </Compile>
-    <Compile Include="Items.Designer.cs">
+    <Compile Include="items.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Items.edmx</DependentUpon>
+      <DependentUpon>items.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Items.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Items.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="Items.edmx.diagram">
-      <DependentUpon>Items.edmx</DependentUpon>
+    <EntityDeploy Include="items.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>items.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="items.edmx.diagram">
+      <DependentUpon>items.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Items.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Items.Context.cs</LastGenOutput>
-      <DependentUpon>Items.edmx</DependentUpon>
-    </Content>
-    <Content Include="Items.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Items.edmx</DependentUpon>
-      <LastGenOutput>Items.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="items.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>items.edmx</DependentUpon>
+      <LastGenOutput>items.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="items.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>items.edmx</DependentUpon>
+      <LastGenOutput>items.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

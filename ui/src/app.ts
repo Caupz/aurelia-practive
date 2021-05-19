@@ -17,6 +17,11 @@ export class App {
     fetch(`${API}/items`)
       .then(response => response.json())
       .then(data => {
+
+        for (let i = 0; i < data.length; i++) {
+          data[i].done = data[i].done === 1 ? true : false;
+        }
+
         console.log("data", data)
         this.todos = data;
       });
@@ -27,7 +32,7 @@ export class App {
     if (this.todoDescription) {
       const todo = {
         description: this.todoDescription,
-        done: false
+        done: 0
       };
       this.todoDescription = '';
 
@@ -94,7 +99,6 @@ export class App {
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
-      this.todos.push(data);
     })
     .catch((error) => {
       console.error('Error:', error);

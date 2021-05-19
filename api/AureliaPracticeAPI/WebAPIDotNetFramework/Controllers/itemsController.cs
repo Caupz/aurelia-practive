@@ -17,7 +17,7 @@ namespace WebAPIDotNetFramework.Controllers
     [EnableCors("*", "*", "*")]
     public class itemsController : ApiController
     {
-        private todoitemsEntities db = new todoitemsEntities();
+        private itemsEntities db = new itemsEntities();
 
         // GET: api/items
         public IQueryable<item> Getitems()

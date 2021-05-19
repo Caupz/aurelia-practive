@@ -9,7 +9,7 @@
   <ul>
     <li repeat.for="todo of todos">
       <input change.trigger="editTodo(todo.id)" type="checkbox" checked.bind="todo.done">
-      <input change.trigger="editTodo(todo.id)" class="custom-input" value.bind="todo.description" type="text" css="text-decoration: ${todo.done === 1 ? 'line-through' : 'none'}" />
+      <input change.trigger="editTodo(todo.id)" class="custom-input" value.bind="todo.description" type="text" css="text-decoration: ${todo.done ? 'line-through' : 'none'}" />
       <button click.trigger="removeTodo(todo.id)">Remove</button>
     </li>
   </ul>
